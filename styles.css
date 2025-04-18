@@ -194,3 +194,50 @@ body {
   background-color: var(--border-color);
   transform: translateY(-50%);
 }
+
+.header__content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 4.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.h1__span-1 {
+  color: var(--accent-color);
+}
+
+.h1__span-2 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: var(--text-light);
+  opacity: 0.8;
+}
+
+.header__content p {
+  margin-bottom: 2.5rem;
+  color: #ccc;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.header__content .btn {
+  padding: 1rem 2rem;
+  outline: none;
+  border: 2px solid var(--accent-color);
+  font-size: 1rem;
+  color: var(--accent-color);
+  background-color: transparent;
+  border-radius: 5rem;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header__content .btn:hover {
+  color: var(--dark-primary);
+  background-color: var(--accent-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
