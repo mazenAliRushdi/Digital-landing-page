@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Updated Root variables for a more refined look */
+:root {
+  --dark-primary: #1e293b; /* Darker primary background */
+  --dark-secondary: #334155; /* Slightly lighter secondary background */
+  --text-light: #e2e8f0; /* Softer light text */
+  --accent-color: #4ade80; /* A more modern accent color */
+  --white: #ffffff;
+  --max-width: 1200px;
+  --shadow-color: rgba(0, 0, 0, 0.15); /* More subtle shadow */
+  --border-color: #475569; /* A subtle border color */
+}
+
+/* Resetting default browser styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Styling for anchor tags (links) */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease-in-out; /* Smoother transition */
+}
+
+/* Styling for unordered lists */
+ul {
+  list-style: none;
+}
+
+/* Body styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--dark-primary);
+  color: var(--text-light);
+  line-height: 1.6; /* Improved line height for readability */
+}
+
+/* Updated Dark Navigation Styles */
+.dark-nav {
+  position: fixed;
+  isolation: isolate;
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  z-index: 10;
+  background-color: rgba(
+    var(--dark-secondary),
+    0.9
+  ); /* Semi-transparent background */
+  box-shadow: 0 2px 8px var(--shadow-color);
+  padding: 1rem 1.5rem; /* Adjusted padding */
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nav__header {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.8rem; /* Refined logo font size */
+  font-weight: 600;
+  color: var(--accent-color);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.nav__logo img {
+  display: flex;
+  max-width: 38px;
+  filter: brightness(1.1) saturate(1.2) hue-rotate(10deg);
+}
+
+.nav__logo span {
+  display: none;
+}
+
+.nav__menu__btn {
+  font-size: 1.8rem;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.nav__menu__btn:hover {
+  opacity: 0.8;
+}
+
+.nav__links {
+  position: absolute;
+  top: 65px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem; /* Adjusted gap */
+  padding: 1.5rem; /* Adjusted padding */
+  background-color: var(--dark-secondary);
+  transition: transform 0.3s ease-in-out;
+  z-index: -1;
+  transform: translateY(-110%);
+  box-shadow: 0 4px 10px var(--shadow-color);
+  border-radius: 4px; /* Subtle rounded corners for mobile menu */
+}
+
+.nav__links.open {
+  transform: translateY(0);
+}
+
+.nav__links a {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.nav__links a:hover {
+  color: var(--accent-color);
+  background-color: rgba(
+    var(--accent-color),
+    0.1
+  ); /* Subtle hover background */
+}
+
+.nav__links .active {
+  color: var(--accent-color);
+  font-weight: 500;
+}
